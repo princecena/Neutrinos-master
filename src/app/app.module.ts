@@ -33,11 +33,8 @@ import { SocketProvider } from '../providers/socket/socket';
 import { UtilityProvider } from '../providers/utility/utility';
 import { LoginProvider } from '../providers/login/login';
 import { RoundPipe } from '../pipes/round/round';
-<<<<<<< HEAD
 import { UsersProvider } from '../providers/users/users';
-=======
 import { MonthyrPipe } from '../pipes/monthyr/monthyr';
->>>>>>> 58b0a6009efd2a22de131514511c6f52b789fe5a
 
 @NgModule({
   declarations: [
