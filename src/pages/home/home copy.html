@@ -1,0 +1,49 @@
+<ion-header>
+    <expandable-header [scrollArea]="mycontent" headerHeight="170">
+      <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-toolbar>
+          <ion-searchbar></ion-searchbar>
+        </ion-toolbar>    
+      </ion-navbar>
+      <div class="banner_holder">
+        <img src="assets/analytics.png">
+      </div>
+    </expandable-header>
+</ion-header>
+
+<ion-content no-padding fullscreen #mycontent>
+<ion-grid>
+<ion-row>
+  <ion-col no-padding text-center>
+    <h4>INDIA</h4>
+    <h5>Fixed Income Money Market</h5>
+    <h6>Let's find the best investment option for you!!</h6>
+  </ion-col>
+</ion-row>
+<ion-row >
+  <ion-col no-padding col-9>
+      <ion-range min="0" max="100000" [(ngModel)]="amount" pin="false" step = "1000"></ion-range>
+      <div class="sliderlabel">How much amount do you plan to Invest?</div>
+  </ion-col>
+  <ion-col no-padding><div class="slidervalue"><b>{{ amount | currency : "INR" : true : '1.0-0' }}</b></div></ion-col>    
+</ion-row>
+<ion-row>
+  <ion-col no-padding col-9>
+    <ion-range min="0" max="60" [(ngModel)]="tenure" pin="false" step = "1"></ion-range>
+    <div class="sliderlabel">For how many months would you like to Invest?</div>
+  </ion-col>
+  <ion-col no-padding><div class="slidervalue"><b>{{tenure | monthyr}}</b></div></ion-col>  
+</ion-row>
+<br>
+<ion-row>
+  <ion-col padding>
+    <button ion-button block type="submit" (click)="findInstruments()"> 
+      FIND INVESTMENT OPTIONS
+    </button>
+  </ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>

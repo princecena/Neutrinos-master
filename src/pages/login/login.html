@@ -1,0 +1,35 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>   
+  <div class="banner_holder">
+      <img src="assets/analytics.png">
+  </div>
+</ion-header>  
+
+<ion-content>
+  <form #loginForm="ngForm">
+      <ion-item>
+        <ion-label floating>Mobile Number</ion-label>
+        <ion-input type="number"  name="mobilenumber" #mobileNumberInput></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email (Optional)</ion-label>
+        <ion-input type="email"  name="emailphone" #emailIdInput></ion-input>
+      </ion-item>
+      <div padding>
+        <button ion-button block type="submit"
+           (click)="registerUser(mobileNumberInput,emailIdInput)">
+           Register
+        </button>
+        <br>
+        <button ion-button color="grey" block type="submit"
+          (click)="guestUser()">
+          Explore as guest
+        </button>
+      </div>
+    </form>
+</ion-content>

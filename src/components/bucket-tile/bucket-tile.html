@@ -1,0 +1,31 @@
+<ion-card (click)="bucketInstruments()">
+  <ion-card-content>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col text-left>
+          Instruments
+          <font size="3" color="#4286f4"><b>{{bucket.instruments}}</b></font>
+        </ion-col>
+        <ion-col col-auto>
+          <img [src]="bucket.instimg"/>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-left>
+          Claimed
+        </ion-col>
+        <ion-col col-auto text-right>
+          <b>{{bucket.claimedReturnPer}}%</b>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col text-left>
+          Actual
+        </ion-col>
+        <ion-col col-auto text-right>
+          <b>{{bucket.netReturnPer}}%</b>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>

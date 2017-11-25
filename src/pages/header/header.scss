@@ -1,0 +1,30 @@
+page-login {
+  text-align: center;
+  
+  banner_holder{
+    width: 100%;
+    position: relative;
+  }
+
+  .banner_holder img{
+      width: 100%;
+      height: 110px;;
+  }
+
+  .toolbar-background {
+    background-color: rgb(134, 204, 204);
+  } 
+
+  .showpassword{
+    position: relative;
+    left:10em;
+    bottom: 2em;
+  }
+
+  .item-cover{
+    left: initial;
+    right: 0;
+    width: 10%;
+  } 
+  
+}

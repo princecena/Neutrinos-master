@@ -1,0 +1,64 @@
+<ion-header>
+  <expandable-header [scrollArea]="mycontent" headerHeight="170">
+      <ion-navbar hideBackButton="true">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-toolbar>
+          <ion-searchbar></ion-searchbar>
+        </ion-toolbar>    
+      </ion-navbar>
+      <div class="banner_holder">
+        <img src="assets/analytics.png">
+      </div>
+    </expandable-header>
+</ion-header>
+
+<ion-content fullscreen #mycontent>
+  <ion-grid>
+    <br>
+    <ion-row>
+      <ion-col text-center>
+        Most profitable Fixed Income Investment for you!!
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let instrument of bestInstruments">
+      <ion-col>
+        <instrument-tile [instrument] = "instrument"></instrument-tile>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-item no-padding text-center>
+          <font size="3" color="#2f66bf">INVESTMENT OPTIONS</font>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+        <font size="2" padding-left>BANKS</font>
+        <bucket-tile [bucket] = "bucketList[0]"></bucket-tile>
+      </ion-col>
+      <ion-col >
+        <font size="2" padding-left>GOVERNMENT</font>
+        <bucket-tile [bucket] = "bucketList[1]"></bucket-tile>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col >
+        <font size="2" padding-left>CORPORATIONS</font>
+        <bucket-tile [bucket] = "bucketList[2]"></bucket-tile>
+      </ion-col>
+      <ion-col >
+        <font size="2" padding-left>POST OFFICE</font>
+        <bucket-tile [bucket] = "bucketList[3]"></bucket-tile>
+      </ion-col>
+    </ion-row>
+    <ion-item>
+    </ion-item>
+  </ion-grid>
+</ion-content>

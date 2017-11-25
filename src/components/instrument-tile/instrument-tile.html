@@ -1,0 +1,23 @@
+<ion-card class="card" (click)="instrumentDetails()">
+  <ion-card-content>
+    <ion-row no-padding>
+      <ion-col><b>Fixed Deposit</b></ion-col>
+      <ion-col text-right><b>{{instrument.institution}}</b></ion-col>
+    </ion-row>
+    <div class="cardtext">
+    <ion-row no-padding>
+      <ion-col>Amount & Tenure</ion-col>
+      <ion-col text-right>{{instrument.inv_amount | currency : "INR" : true : '1.0-0'}} ({{instrument.inv_time | round}} years)</ion-col>        
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col>Claimed Return {{instrument.int_rate | round}}%</ion-col>
+      <ion-col text-right>{{instrument.claim_amt | currency : "INR" : true : '1.0-0'}}</ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col>Actual Return {{instrument.cc_rate | round}}%</ion-col>
+      <ion-col text-right>{{instrument.act_amt | currency : "INR" : true : '1.0-0'}}</ion-col>
+    </ion-row>
+    </div>
+    <!-- Add card content here! -->
+  </ion-card-content>
+</ion-card>
